@@ -1,0 +1,102 @@
+baseURL: https://monoyan.github.io/
+languageCode: en-us
+title: Yan's New Hugo Site
+paginate: 5
+theme: "PaperMod"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+languages:
+    en:
+        title: Yan's Notes
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          # category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: Home
+                  url: /
+                  weight: 1
+                - name: Archive
+                  url: archives/
+                  weight: 2
+                - identifier: tags
+                  name: Tags
+                  url: tags/
+                  weight: 3
+                - identifier: search
+                  name: Search
+                  url: search/
+                  weight: 4
+                - name: About
+                  url: about/
+                  weight: 5
+outputs:
+    home:
+        - HTML
+        # - RSS
+        - JSON
+
+params:
+    env: production
+    title: "Yan's Notes"
+    description: "Record, Share and Archive"
+    keywords: [Blog, Technologic, Life, Program, Travel]
+    author: Yan Wang
+    DateFormat: "Monday, January 2, 2006"
+    defaultTheme: auto
+    disableThemeToggle: false
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: false
+    ShowRssButtonInSectionTermList: false
+    ShowToc: true
+    TocOpen: true
+    comments: true
+    ShowAllPagesInArchive: true
+    ShowFullTextinRSS: true
+
+    mainSections:
+        - posts
+
+    profileMode:
+        enabled: false
+
+    homeInfoParams:
+        Title: "Hi there 👋"
+        Content: >
+            I'm a frontend developer who loves building websites that are both aesthetically pleasing and easy to use. I'm fluent in English, learning Japanese, and a native Chinese speaker. I'm always open to new opportunities and collaborations. Reach out to me at yanshencc@gmail.com.
+    socialIcons:
+        - name: github
+          url: "https://github.com/monoyan"
+        - name: telegram
+          url: "https://t.me/monoyan"
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+        anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        lineNos: false
+        style: darcula
