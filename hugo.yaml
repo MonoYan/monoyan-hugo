@@ -1,4 +1,4 @@
-baseURL: https://monoyan.github.io/
+baseURL: https://monoyan-hugo.vercel.app/
 languageCode: en-us
 title: Yan's New Hugo Site
 paginate: 5
